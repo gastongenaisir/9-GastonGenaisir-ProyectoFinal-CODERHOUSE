@@ -1,0 +1,157 @@
+.heroEstudio {
+  height: 490px;
+}
+
+.mainTitle {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.heroService {
+  height: 18rem;
+}
+
+/* GALERIA */
+.heroImage {
+  display: flex;
+  @include flex(row, space-around, center, wrap);
+  align-content: center;
+}
+
+.heroGalery {
+  height: 30rem;
+}
+
+.heroEquip {
+  height: 50rem;
+}
+
+.heroGaleryItem {
+  margin: 1rem;
+  border-radius: 30px;
+}
+
+.heroGaleryImg {
+  border-radius: 30px;
+  box-shadow: 0 0 18px 2px rgb(255 255 255 / 52%);
+  transition: all 0.5s ease;
+}
+
+.heroGaleryImg:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile)) {
+  .mainTitle {
+    font-size: 1.2rem;
+    margin: 30px auto;
+  }
+
+  .heroImage {
+    display: flex;
+    @include flex(column, center, center, nowrap);
+    align-content: center;
+  }
+
+  .heroGalery {
+    height: 550px;
+  }
+  .heroGaleryItem {
+    margin: 1rem;
+    border-radius: 30px;
+  }
+
+  .heroGaleryImg {
+    width: 250px;
+    border-radius: 30px;
+  }
+  .heroEquip {
+    height: 60rem;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: map-get($breakpoints, tablet)) {
+  .mainTitle {
+    font-size: 1.3rem;
+    margin: 30px auto;
+  }
+
+  .heroImage {
+    display: flex;
+    @include flex(row, center, center, wrap);
+    align-content: center;
+  }
+
+  .heroGalery {
+    height: 25rem;
+  }
+  .heroGaleryItem {
+    margin: 1rem;
+    border-radius: 30px;
+  }
+
+  .heroGaleryImg {
+    width: 250px;
+    border-radius: 30px;
+  }
+  .heroEquip {
+    height: 50rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: map-get($breakpoints, laptop)) {
+  .mainTitle {
+    font-size: 1.3rem;
+    margin: 30px auto;
+  }
+
+  .heroImage {
+    display: flex;
+    @include flex(row, center, center, wrap);
+    align-content: center;
+  }
+
+  .heroGalery {
+    height: 25rem;
+  }
+  .heroGaleryItem {
+    margin: 1rem;
+    border-radius: 30px;
+  }
+
+  .heroGaleryImg {
+    width: 250px;
+    border-radius: 30px;
+  }
+  .heroEquip {
+    height: 50rem;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: map-get($breakpoints, desktop)) {
+  .mainTitle {
+    font-size: 1.3rem;
+    margin: 30px auto;
+  }
+
+  .heroImage {
+    display: flex;
+    @include flex(row, center, center, wrap);
+    align-content: center;
+  }
+
+  .heroGalery {
+    height: 25rem;
+  }
+  .heroGaleryItem {
+    margin: 1rem;
+    border-radius: 30px;
+  }
+
+  .heroGaleryImg {
+    width: 250px;
+    border-radius: 30px;
+  }
+  .heroEquip {
+    height: 50rem;
+  }
+}

@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+.padre {
+  font-family: "Russo One", sans-serif;
+  background-color: rgba(0, 0, 0, 0.88);
+}
+
+@mixin flex($direccion, $justify, $align, $wrap) {
+  flex-direction: $direccion;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+$colores: (
+  titulo: #f0f8ff,
+  bgBoton: #ff1e1e,
+);
+
+$shadows: (
+  textShadow: #ff0000 0 -2px,
+  boxShadow: 0 0 18px 2px rgb(255 255 255 / 52%),
+);
+
+.titulo {
+  color: map-get($colores, titulo);
+  text-shadow: map-get($shadows, textShadow);
+  text-transform: uppercase;
+}
+
+$breakpoints: (
+  mobile: 320px,
+  tablet: 768px,
+  laptop: 1024px,
+);

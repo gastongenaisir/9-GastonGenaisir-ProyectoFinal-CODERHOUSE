@@ -1,0 +1,74 @@
+.contactForm {
+  display: flex;
+  @include flex(column, center, center, nowrap);
+  align-content: center;
+  margin: 20px auto;
+  height: 30rem;
+  input {
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+  }
+  textarea {
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    height: 180px;
+    resize: none;
+  }
+}
+
+@media screen and (min-width: map-get($breakpoints, mobile)) {
+  .contactForm {
+    margin: 10px 10px;
+
+    input {
+      font-size: 0.8rem;
+    }
+    textarea {
+      height: 100px;
+    }
+  }
+}
+@media screen and (min-width: 321px) and (max-width: map-get($breakpoints, tablet)) {
+  .contactForm {
+    margin: 10px 10px;
+    input {
+      font-size: 1rem;
+    }
+    textarea {
+      height: 100px;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: map-get($breakpoints, laptop)) {
+  .contactForm {
+    margin: 10px 10px;
+    input {
+      font-size: 1rem;
+    }
+    textarea {
+      height: 100px;
+    }
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: map-get($breakpoints, desktop)) {
+  .contactForm {
+    margin: 10px 10px;
+    input {
+      font-size: 1rem;
+    }
+    textarea {
+      height: 160px;
+    }
+  }
+}

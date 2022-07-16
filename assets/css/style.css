@@ -1,0 +1,633 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.padre {
+  font-family: "Russo One", sans-serif;
+  background-color: rgba(0, 0, 0, 0.88);
+}
+
+.titulo, .hijo3, .button, .listaServicios, .hijo2 .heroIndex .heroTitle, .hijo2 .heroIndex, .hijo2, .hijo .link .navBar {
+  color: #f0f8ff;
+  text-shadow: #ff0000 0 -2px;
+  text-transform: uppercase;
+}
+
+.hijo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.hijo .logo {
+  width: 200px;
+  margin-top: 10px;
+}
+.hijo .link {
+  color: white;
+  text-decoration: none;
+}
+.hijo .link .navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.hijo .link .navBar a {
+  margin: 30px;
+  font-size: 1.6rem;
+  color: #f0f8ff;
+  justify-content: center;
+  text-decoration: none;
+  position: relative;
+}
+.hijo .link .navBar a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: #ff1e1e;
+  /*animacion de derecha a izquierda*/
+  transform-origin: center;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+.hijo .link .navBar a:hover::after {
+  /*animacion de derecha a izquierda*/
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+@media screen and (min-width: 320px) {
+  .hijo {
+    padding: 15px;
+  }
+  .hijo .link .navBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .hijo .link .navBar a {
+    margin: 30px;
+    font-size: 1rem;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 768px) {
+  .hijo {
+    padding: 15px;
+  }
+  .hijo .link .navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .hijo .link .navBar a {
+    margin: 30px;
+    font-size: 1.3rem;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .hijo {
+    padding: 15px;
+  }
+  .hijo .link .navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .hijo .link .navBar a {
+    margin: 30px;
+    font-size: 1.5rem;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .hijo {
+    padding: 15px;
+  }
+  .hijo .link .navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .hijo .link .navBar a {
+    margin: 30px;
+    font-size: 1.6rem;
+    justify-content: center;
+  }
+}
+.hijo2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  align-content: center;
+  background-image: url(../img/fondo.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hijo2 .heroIndex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 20px;
+  align-content: center;
+  margin: 20px;
+}
+.hijo2 .heroIndex .foto {
+  width: 450px;
+  border-radius: 50px;
+  margin: 0 45px;
+  box-shadow: 0 0 18px 2px rgba(255, 255, 255, 0.52);
+  transition: all 0.5s ease;
+}
+.hijo2 .heroIndex .heroTitle {
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 320px) {
+  .hijo2 .heroIndex {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0;
+    align-content: center;
+    margin: 0;
+  }
+  .hijo2 .heroIndex .foto {
+    width: 250px;
+    border-radius: 50px;
+    margin: 20px 0;
+  }
+  .hijo2 .heroIndex .heroTitle {
+    width: 80%;
+    font-size: 1rem;
+    margin: 20px 5px;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 768px) {
+  .hijo2 .heroIndex {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0;
+    align-content: center;
+    margin: 0;
+  }
+  .hijo2 .heroIndex .foto {
+    width: 25;
+    border-radius: 50px;
+    margin: 20px 0;
+  }
+  .hijo2 .heroIndex .heroTitle {
+    width: 80%;
+    font-size: 1rem;
+    margin: 20px 5px;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .hijo2 .heroIndex {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .hijo2 .heroIndex .foto {
+    width: 250px;
+    border-radius: 50px;
+    margin: 20px 0;
+  }
+  .hijo2 .heroIndex .heroTitle {
+    width: 80%;
+    font-size: 1.2rem;
+    margin: 20px 5px;
+  }
+}
+.heroEstudio {
+  height: 490px;
+}
+
+.mainTitle {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.heroService {
+  height: 18rem;
+}
+
+/* GALERIA */
+.heroImage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.heroGalery {
+  height: 30rem;
+}
+
+.heroEquip {
+  height: 50rem;
+}
+
+.heroGaleryItem {
+  margin: 1rem;
+  border-radius: 30px;
+}
+
+.heroGaleryImg {
+  border-radius: 30px;
+  box-shadow: 0 0 18px 2px rgba(255, 255, 255, 0.52);
+  transition: all 0.5s ease;
+}
+
+.heroGaleryImg:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 320px) {
+  .mainTitle {
+    font-size: 1.2rem;
+    margin: 30px auto;
+  }
+  .heroImage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    align-content: center;
+  }
+  .heroGalery {
+    height: 550px;
+  }
+  .heroGaleryItem {
+    margin: 1rem;
+    border-radius: 30px;
+  }
+  .heroGaleryImg {
+    width: 250px;
+    border-radius: 30px;
+  }
+  .heroEquip {
+    height: 60rem;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 768px) {
+  .mainTitle {
+    font-size: 1.3rem;
+    margin: 30px auto;
+  }
+  .heroImage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  .heroGalery {
+    height: 25rem;
+  }
+  .heroGaleryItem {
+    margin: 1rem;
+    border-radius: 30px;
+  }
+  .heroGaleryImg {
+    width: 250px;
+    border-radius: 30px;
+  }
+  .heroEquip {
+    height: 50rem;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .mainTitle {
+    font-size: 1.3rem;
+    margin: 30px auto;
+  }
+  .heroImage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  .heroGalery {
+    height: 25rem;
+  }
+  .heroGaleryItem {
+    margin: 1rem;
+    border-radius: 30px;
+  }
+  .heroGaleryImg {
+    width: 250px;
+    border-radius: 30px;
+  }
+  .heroEquip {
+    height: 50rem;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: ) {
+  .mainTitle {
+    font-size: 1.3rem;
+    margin: 30px auto;
+  }
+  .heroImage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  .heroGalery {
+    height: 25rem;
+  }
+  .heroGaleryItem {
+    margin: 1rem;
+    border-radius: 30px;
+  }
+  .heroGaleryImg {
+    width: 250px;
+    border-radius: 30px;
+  }
+  .heroEquip {
+    height: 50rem;
+  }
+}
+.redes ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  align-content: center;
+  margin: 10px;
+}
+.redes ul .rrss {
+  width: 100px;
+  border-radius: 24px;
+}
+.redes ul .rrss-yt {
+  width: 123px;
+  margin: 25px;
+}
+
+@media screen and (max-width: 320px) {
+  .redes ul .rrss {
+    width: 50px;
+    border-radius: 24px;
+  }
+  .redes ul .rrss-yt {
+    width: 70px;
+    margin: 25px;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 768px) {
+  .redes ul .rrss {
+    width: 50px;
+    border-radius: 24px;
+  }
+  .redes ul .rrss-yt {
+    width: 70px;
+    margin: 25px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .redes ul .rrss {
+    width: 80px;
+    border-radius: 24px;
+  }
+  .redes ul .rrss-yt {
+    width: 97px;
+    margin: 25px;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: ) {
+  .redes ul .rrss {
+    width: 80px;
+    border-radius: 24px;
+  }
+  .redes ul .rrss-yt {
+    width: 97px;
+    margin: 25px;
+  }
+}
+.listaServicios {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 10px;
+  font-size: 1.4rem;
+  line-height: 3;
+}
+
+@media screen and (max-width: 320px) {
+  .listaServicios {
+    padding: 10px;
+    font-size: 1rem;
+    line-height: 4;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 768px) {
+  .listaServicios {
+    padding: 10px;
+    font-size: 1.1rem;
+    line-height: 4;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .listaServicios {
+    padding: 10px;
+    font-size: 1.2rem;
+    line-height: 4;
+  }
+}
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  align-content: center;
+  margin: 20px auto;
+  height: 30rem;
+}
+.contactForm input {
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+}
+.contactForm textarea {
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  height: 180px;
+  resize: none;
+}
+
+@media screen and (min-width: 320px) {
+  .contactForm {
+    margin: 10px 10px;
+  }
+  .contactForm input {
+    font-size: 0.8rem;
+  }
+  .contactForm textarea {
+    height: 100px;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 768px) {
+  .contactForm {
+    margin: 10px 10px;
+  }
+  .contactForm input {
+    font-size: 1rem;
+  }
+  .contactForm textarea {
+    height: 100px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .contactForm {
+    margin: 10px 10px;
+  }
+  .contactForm input {
+    font-size: 1rem;
+  }
+  .contactForm textarea {
+    height: 100px;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: ) {
+  .contactForm {
+    margin: 10px 10px;
+  }
+  .contactForm input {
+    font-size: 1rem;
+  }
+  .contactForm textarea {
+    height: 160px;
+  }
+}
+.button {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  font-size: 1rem;
+  background-color: #ff1e1e;
+  transition: all 0.5s ease;
+}
+
+.hijo3 {
+  height: 93px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  align-content: center;
+}
+.hijo3 p {
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 320px) {
+  .hijo3 {
+    height: 93px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    align-content: center;
+  }
+  .hijo3 p {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 768px) {
+  .hijo3 {
+    height: 93px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    align-content: center;
+  }
+  .hijo3 p {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .hijo3 {
+    height: 93px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    align-content: center;
+  }
+  .hijo3 p {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}/*# sourceMappingURL=style.css.map */

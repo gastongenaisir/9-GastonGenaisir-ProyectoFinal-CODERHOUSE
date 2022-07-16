@@ -1,0 +1,70 @@
+.redes ul {
+  display: flex;
+  @include flex(row, center, center, nowrap);
+  align-content: center;
+  margin: 10px;
+  .rrss {
+    width: 100px;
+    border-radius: 24px;
+  }
+
+  .rrss-yt {
+    width: 123px;
+    margin: 25px;
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile)) {
+  .redes ul {
+    .rrss {
+      width: 50px;
+      border-radius: 24px;
+    }
+
+    .rrss-yt {
+      width: 70px;
+      margin: 25px;
+    }
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: map-get($breakpoints, tablet)) {
+  .redes ul {
+    .rrss {
+      width: 50px;
+      border-radius: 24px;
+    }
+
+    .rrss-yt {
+      width: 70px;
+      margin: 25px;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: map-get($breakpoints, laptop)) {
+  .redes ul {
+    .rrss {
+      width: 80px;
+      border-radius: 24px;
+    }
+
+    .rrss-yt {
+      width: 97px;
+      margin: 25px;
+    }
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: map-get($breakpoints, desktop)) {
+  .redes ul {
+    .rrss {
+      width: 80px;
+      border-radius: 24px;
+    }
+
+    .rrss-yt {
+      width: 97px;
+      margin: 25px;
+    }
+  }
+}

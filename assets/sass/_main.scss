@@ -1,0 +1,98 @@
+.hijo2 {
+  display: flex;
+  @include flex(column, center, center, wrap);
+  @extend .titulo;
+  padding: 10px;
+  align-content: center;
+  background-image: url(../img/fondo.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .heroIndex {
+    display: flex;
+    @include flex(row, space-around, center, nowrap);
+    @extend .titulo;
+    padding: 20px;
+    align-content: center;
+    margin: 20px;
+
+    .foto {
+      width: 450px;
+      border-radius: 50px;
+      margin: 0 45px;
+      box-shadow: map-get($shadows, boxShadow);
+      transition: all 0.5s ease;
+    }
+    .heroTitle {
+      width: 100%;
+      font-size: 1.6rem;
+      font-weight: bold;
+      @extend .titulo;
+    }
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile)) {
+  .hijo2 {
+    .heroIndex {
+      @include flex(column, space-around, center, nowrap);
+      padding: 0;
+      align-content: center;
+      margin: 0;
+
+      .foto {
+        width: 250px;
+        border-radius: 50px;
+        margin: 20px 0;
+      }
+      .heroTitle {
+        width: 80%;
+        font-size: 1rem;
+        margin: 20px 5px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: map-get($breakpoints, tablet)) {
+  .hijo2 {
+    .heroIndex {
+      @include flex(column, space-around, center, nowrap);
+      padding: 0;
+      align-content: center;
+      margin: 0;
+
+      .foto {
+        width: 25;
+        border-radius: 50px;
+        margin: 20px 0;
+      }
+      .heroTitle {
+        width: 80%;
+        font-size: 1rem;
+        margin: 20px 5px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: map-get($breakpoints, laptop)) {
+  .hijo2 {
+    .heroIndex {
+      @include flex(row, center, center, nowrap);
+      .foto {
+        width: 250px;
+        border-radius: 50px;
+        margin: 20px 0;
+      }
+      .heroTitle {
+        width: 80%;
+        font-size: 1.2rem;
+        margin: 20px 5px;
+      }
+    }
+  }
+}

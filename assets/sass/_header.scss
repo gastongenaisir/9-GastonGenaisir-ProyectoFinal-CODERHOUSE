@@ -1,0 +1,116 @@
+.hijo {
+  display: flex;
+  @include flex(row, space-around, center, wrap);
+  padding: 10px;
+  .logo {
+    width: 200px;
+    margin-top: 10px;
+  }
+
+  .link {
+    color: white;
+    text-decoration: none;
+
+    .navBar {
+      display: flex;
+      @include flex(row, space-around, center, wrap);
+      padding: 10px;
+      @extend .titulo;
+      a {
+        margin: 30px;
+        font-size: 1.6rem;
+        color: map-get($colores, titulo);
+        justify-content: center;
+        text-decoration: none;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          height: 3px;
+          width: 100%;
+          background: #ff1e1e;
+          /*animacion de derecha a izquierda*/
+          transform-origin: center;
+          transform: scaleX(0);
+          transition: transform 0.2s ease-in-out;
+        }
+        &:hover::after {
+          /*animacion de derecha a izquierda*/
+          transform-origin: left;
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: map-get($breakpoints, mobile)) {
+  .hijo {
+    padding: 15px;
+    .link {
+      .navBar {
+        display: flex;
+        @include flex(column, center, center, wrap);
+        a {
+          margin: 30px;
+          font-size: 1rem;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: map-get($breakpoints, tablet)) {
+  .hijo {
+    padding: 15px;
+    .link {
+      .navBar {
+        display: flex;
+        @include flex(row, space-around, center, wrap);
+        a {
+          margin: 30px;
+          font-size: 1.3rem;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: map-get($breakpoints, laptop)) {
+  .hijo {
+    padding: 15px;
+    .link {
+      .navBar {
+        display: flex;
+        @include flex(row, space-around, center, wrap);
+        a {
+          margin: 30px;
+          font-size: 1.5rem;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1025px) {
+  .hijo {
+    padding: 15px;
+    .link {
+      .navBar {
+        display: flex;
+        @include flex(row, space-around, center, wrap);
+        a {
+          margin: 30px;
+          font-size: 1.6rem;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

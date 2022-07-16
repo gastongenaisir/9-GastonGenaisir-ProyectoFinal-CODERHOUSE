@@ -1,0 +1,53 @@
+.hijo3 {
+  height: 93px;
+  display: flex;
+  @include flex(column, space-around, center, wrap);
+  @extend .titulo;
+  padding: 10px;
+  align-content: center;
+  p {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile)) {
+  .hijo3 {
+    height: 93px;
+    display: flex;
+    @include flex(column, space-around, center, wrap);
+    padding: 10px;
+    align-content: center;
+    p {
+      font-size: 0.8rem;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: map-get($breakpoints, tablet)) {
+  .hijo3 {
+    height: 93px;
+    display: flex;
+    @include flex(column, space-around, center, wrap);
+    padding: 10px;
+    align-content: center;
+    p {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: map-get($breakpoints, laptop)) {
+  .hijo3 {
+    height: 93px;
+    display: flex;
+    @include flex(column, space-around, center, wrap);
+    padding: 10px;
+    align-content: center;
+    p {
+      font-size: 1.1rem;
+      text-align: center;
+    }
+  }
+}

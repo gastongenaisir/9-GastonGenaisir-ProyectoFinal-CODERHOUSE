@@ -1,0 +1,32 @@
+.listaServicios {
+  display: flex;
+  @include flex(column, space-around, center, wrap);
+  align-content: center;
+  @extend .titulo;
+  padding: 10px;
+  font-size: 1.4rem;
+  line-height: 3;
+}
+@media screen and (max-width: map-get($breakpoints, mobile)) {
+  .listaServicios {
+    padding: 10px;
+    font-size: 1rem;
+    line-height: 4;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: map-get($breakpoints, tablet)) {
+  .listaServicios {
+    padding: 10px;
+    font-size: 1.1rem;
+    line-height: 4;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: map-get($breakpoints, laptop)) {
+  .listaServicios {
+    padding: 10px;
+    font-size: 1.2rem;
+    line-height: 4;
+  }
+}
